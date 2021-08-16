@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursive Tree Genarator</title>
+    <link rel="stylesheet" href="pathstyle.css">
+    <link rel="icon" href="./images/tree.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="tree-background">
+        <header>
+            <img src="./images/tree.jpg" alt="">
+            Recursive Tree Genarator
+        </header>
+        <div class="details-container">
+            <label for="rotate-input">Branch Angle:</label>
+            <input type="range" min="1" max="90" id="rotate-input" value="25">
+            <label for="height-input">Tree Size:</label>
+            <input type="range" min="30" max="74" id="height-input" value="70">
+            <label for="recursion-input">Recursion Level:</label>
+            <input type="range" min="8" max="80" id="recursion-input" value="5">
+            <label for="length-input">Height Variation:</label>
+            <input type="range" min="0" max="100" id="length-input" value="100">
+            <label for="angle-input">Angle Variation:</label>
+            <input type="range" min="0" max="100" id="angle-input" value="100">
+            <label for="width-input">Trunk Width:</label>
+            <input type="range" min="1" max="30" id="width-input" value="10">
+            <label for="leaf-input">Leaf Probability:</label>
+            <input type="range" min="0" max="100" id="leaf-input" value="100" class="leafs">
+            <label for="fruit-input">Fruit Probability:</label>
+            <input type="range" min="0" max="3" id="fruit-input">
+            <label for="wind-input">Wind Force:</label>
+            <input type="range" min="0" max="30" id="wind-input" value="6">
+            <button class="add-wind">Add Wind</button>
+            <button class="hide-hud">Hide Hud</button>
+            <button class="new-tree">Generate New Tree <span class="start">Click to genarate tree</span></button>
+        </div>
+
+        <div class="hud"></div>
+    
+        <div class="tree-container">
+    
+        </div>
+    </div>
+    
+    <script src="tree.js"></script>
+</body>
+</html>

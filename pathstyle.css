@@ -1,0 +1,766 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+body .tutorial {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+body .tutorial .tutorial-card {
+  width: 60%;
+  height: 80%;
+  background-color: white;
+  border: 3px solid darkslateblue;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2%;
+  align-items: center;
+  text-align: center;
+}
+
+body .tutorial .tutorial-card .tutorial-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+body .tutorial .tutorial-card .start {
+  color: gold;
+  padding: 0 10px;
+  font-size: 18pt;
+}
+
+body .tutorial .tutorial-card .end {
+  color: crimson;
+  padding: 0 10px;
+  font-size: 16pt;
+}
+
+body .tutorial .tutorial-card .tutorial-btns {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+body .tutorial .tutorial-card .tutorial-btns button {
+  margin: 1%;
+  padding: 10px;
+  background-color: darkslateblue;
+  color: white;
+  border: 2px solid darkslateblue;
+  border-radius: 3px;
+  outline: none;
+  transition: 0.1s ease;
+}
+
+body .tutorial .tutorial-card .tutorial-btns button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: darkslateblue;
+  cursor: pointer;
+}
+
+body .tutorial .tutorial-card .tutorial-btns .previous {
+  margin-left: auto;
+}
+
+body .header {
+  padding: 3px 5%;
+  width: 100%;
+  color: darkslateblue;
+  display: flex;
+  align-items: center;
+}
+body .header img {
+  height: 30px;
+  padding: 0 10px;
+}
+
+body .header i {
+  margin-left: auto;
+  font-size: 14pt;
+  padding: 5px;
+  cursor: pointer;
+}
+
+body header {
+  width: 100vw;
+  height: 60px;
+  padding: 0 3%;
+  background-color: darkslateblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+body header section {
+  display: flex;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+}
+
+body header .select {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.9);
+  height: 100%;
+  cursor: pointer;
+}
+
+body header .select i {
+  position: relative;
+  left: 6px;
+}
+
+body header .select ul {
+  display: none;
+  top: 100%;
+  padding-top: 10px;
+  position: absolute;
+  width: 180px;
+  background-color: white;
+  border: 4px solid darkslateblue;
+  border-top: none;
+}
+
+body header .select ul li {
+  width: 100%;
+  color: darkslateblue;
+  padding: 5px 15px;
+  line-height: 30px;
+  border-bottom: 1px solid darkslateblue;
+  list-style: none;
+  transition: 0.1s ease;
+}
+
+body header .select ul li:hover {
+  color: white;
+  background-color: darkslateblue;
+  cursor: pointer;
+}
+
+body header .select ul:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  background-color: darkslateblue;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+}
+
+body header .select:hover ul {
+  display: block;
+}
+
+body header .start-alg {
+  background-color: white;
+  color: darkslateblue;
+  border: 2px solid darkslateblue;
+  height: 40px;
+  text-align: center;
+  padding: 0 30px;
+  border-radius: 5px;
+  transition: 0.2s ease;
+}
+
+body header .start-alg:hover {
+  color: white;
+  border: 2px solid white;
+  background-color: darkslateblue;
+}
+
+body header .start-alg:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+body header button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+}
+
+body header button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+body header .slider label {
+  padding: 5px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+body header .slider input {
+  outline: none;
+}
+
+body .legenda {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 10px 60px;
+  padding-left: 9vw;
+  font-size: 10pt;
+}
+
+body .legenda .leg-item {
+  margin-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+body .legenda .leg-item .pre {
+  margin: 5px;
+  width: 28px;
+  height: 28px;
+  font-size: 14pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+body .legenda .leg-item .start {
+  color: gold;
+  margin: 5px;
+}
+
+body .legenda .leg-item .end {
+  margin: 5px;
+  color: crimson;
+}
+
+body .legenda .leg-item .empty {
+  border: 1px solid lightblue;
+}
+
+body .legenda .leg-item .vis1 {
+  border: 1px solid lightblue;
+  background-color: cyan;
+}
+
+body .legenda .leg-item .short {
+  border: 1px solid lightblue;
+  background-image: linear-gradient(135deg, yellow, #ff7d7d);
+}
+
+body .legenda .leg-item .wall {
+  background-color: black;
+}
+
+body .legenda .leg-item .direction-node {
+  color: darkslateblue;
+}
+
+body .legenda .no-weight {
+  color: darkred;
+  text-decoration: line-through;
+}
+
+body .al-dis {
+  text-align: center;
+}
+
+body .grid-container {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+body .grid-container .grid {
+  margin: 10px;
+  border-right: 1px solid lightblue;
+  border-bottom: 1px solid lightblue;
+  display: -ms-grid;
+  display: grid;
+}
+
+body .grid-container .grid .spot {
+  background-color: white;
+  border-left: 1px solid lightblue;
+  border-top: 1px solid lightblue;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+body .grid-container .grid .spot .start {
+  color: gold;
+  -webkit-animation: enlarge 0.3s ease;
+  animation: enlarge 0.3s ease;
+  cursor: pointer;
+  font-size: 20pt;
+}
+
+body .grid-container .grid .spot .end {
+  -webkit-animation: enlarge 0.3s ease;
+  animation: enlarge 0.3s ease;
+  color: crimson;
+  cursor: pointer;
+  font-size: 15pt;
+}
+
+body .grid-container .grid .spot .weight {
+  font-size: 16px;
+  -webkit-animation: enlarge 0.3s ease;
+  animation: enlarge 0.3s ease;
+}
+
+body .grid-container .grid .spot .direction-node {
+  font-size: 16px;
+  -webkit-animation: enlarge 0.3s ease;
+  animation: enlarge 0.3s ease;
+  color: darkslateblue;
+}
+
+body .tree-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("https://www.how-to-draw-funny-cartoons.com/images/cartoon-background-001.png");
+  width: 100vw;
+  height: 120vh;
+  background-size: cover;
+}
+
+body .tree-background header {
+  position: fixed;
+  font-size: 18pt;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 100vw;
+  overflow: hidden;
+  background-color: rgb(27, 133, 50);
+}
+
+body .tree-background header img {
+  width: 40px;
+  position: absolute;
+  left: 0;
+}
+
+body .details-container {
+  left: 2%;
+  top: 60px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgba(154, 205, 50, 0.4);
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+  width: 220px;
+  text-align: center;
+}
+
+body .details-container input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: brown;
+  height: 5px;
+  width: 180px;
+  border-radius: 5px;
+  margin: 10px auto;
+  outline: none;
+}
+
+body .details-container button {
+  width: 180px;
+  border-radius: 10px;
+  border: 2px solid rgba(154, 205, 50, 0.9);
+  padding: 5px;
+  background-color: transparent;
+  margin: 10px;
+  transition: 0.2s ease;
+  position: relative;
+  outline: none;
+}
+
+body .details-container button:hover {
+  cursor: pointer;
+  background-color: rgb(170, 255, 0);
+}
+
+body .details-container button span {
+  position: absolute;
+  width: 160px;
+  padding: 10px;
+  top: 50%;
+  left: 120%;
+  transform: translateY(-50%);
+  background: rgb(170, 255, 0);
+  border-radius: 6px;
+}
+
+body .details-container button span::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background-color: rgb(170, 255, 0);
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+body .hud {
+  position: absolute;
+  padding: 4vh 20vh;
+  pointer-events: none;
+}
+
+body .tree-container {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  top: 88vh;
+  margin: auto;
+}
+
+body .tree-container .leaf {
+  position: absolute;
+  bottom: 90%;
+  color: rgba(154, 205, 50, 0.9);
+}
+
+body .tree-container .fruit {
+  color: crimson;
+  font-size: 20pt;
+}
+
+#leaf-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2017/png/iconmonstr-leaf-1.png&r=164&g=210&b=70");
+  background-size: cover;
+  margin: -1px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#wind-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2016/png/iconmonstr-weather-64.png&r=0&g=153&b=255");
+  background-size: cover;
+  margin: -1px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#width-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("https://www.flaticon.com/svg/static/icons/svg/1144/1144142.svg");
+  background-size: cover;
+  margin: -1px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#height-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("https://www.flaticon.com/svg/static/icons/svg/490/490091.svg");
+  background-size: cover;
+  margin: -1px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#length-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("https://www.flaticon.com/svg/static/icons/svg/740/740934.svg");
+  background-size: cover;
+  margin: -1px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#recursion-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("https://www.flaticon.com/svg/static/icons/svg/372/372053.svg");
+  background-size: cover;
+  margin: -1px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#rotate-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("https://www.flaticon.com/svg/static/icons/svg/261/261968.svg");
+  background-size: cover;
+  margin: -1px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#angle-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("https://www.flaticon.com/svg/static/icons/svg/261/261968.svg");
+  background-size: cover;
+  margin: -1px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#fruit-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("https://www.flaticon.com/svg/static/icons/svg/415/415733.svg");
+  background-size: cover;
+  margin: -1px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.no-click {
+  pointer-events: none !important;
+}
+
+@-webkit-keyframes enlarge {
+  0% {
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+  }
+}
+
+@keyframes enlarge {
+  0% {
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+  }
+}
+
+@-webkit-keyframes disapair {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: magenta;
+  }
+  100% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    background-color: cyan;
+  }
+}
+
+@keyframes disapair {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: magenta;
+  }
+  100% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    background-color: cyan;
+  }
+}
+
+@-webkit-keyframes search {
+  0% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    background-color: magenta;
+  }
+}
+
+@keyframes search {
+  0% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    background-color: magenta;
+  }
+}
+
+@-webkit-keyframes path {
+  0% {
+    background-color: magenta;
+  }
+}
+
+@keyframes path {
+  0% {
+    background-color: magenta;
+  }
+}
+
+@-webkit-keyframes branch {
+  0% {
+    height: 0;
+    width: 0;
+  }
+}
+
+@keyframes branch {
+  0% {
+    height: 0;
+    width: 0;
+  }
+}
+
+@-webkit-keyframes wind {
+  50% {
+    -webkit-transform: rotateZ(10deg);
+    transform: rotateZ(10deg);
+  }
+}
+
+@keyframes wind {
+  50% {
+    -webkit-transform: rotateZ(10deg);
+    transform: rotateZ(10deg);
+  }
+}
+
+@media (max-width: 1440px) {
+  body .tutorial p {
+    font-size: 10pt;
+  }
+}
+
+@media (max-width: 1024px) {
+  body header {
+    font-size: 10pt;
+  }
+  body .tutorial p {
+    font-size: 9pt;
+  }
+}
+
+@media (max-width: 768px) {
+  body .tutorial p {
+    font-size: 8pt;
+  }
+
+  body .legenda {
+    display: none;
+  }
+
+  body header {
+    height: 120px;
+  }
+
+  body header section {
+    width: 100%;
+    height: 50%;
+  }
+
+  body header .select i {
+    display: none;
+  }
+}
+
+@media (max-width: 426px) {
+  body .tutorial .tutorial-card {
+    width: 90%;
+  }
+
+  body .tutorial img {
+    width: 80%;
+  }
+
+  body header section {
+    font-size: 7pt;
+  }
+  body header section button {
+    font-size: 8pt;
+  }
+}
+
+@media (max-height: 500px) {
+  body .tutorial img {
+    display: none;
+  }
+}
